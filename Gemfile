@@ -12,6 +12,8 @@ gem 'sqlite3'
 
 gem 'devise', '~> 3.5', '>= 3.5.6'
 
+gem 'simple_token_authentication', '~> 1.0' # see semver.org
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
