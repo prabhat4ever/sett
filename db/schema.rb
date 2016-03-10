@@ -11,14 +11,35 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160308070935) do
+ActiveRecord::Schema.define(version: 20160310065651) do
+
+  create_table "admin_skills", force: :cascade do |t|
+    t.string   "name"
+    t.string   "desc"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "admin_skils", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "skill_user_profiles", id: false, force: :cascade do |t|
+    t.integer "user_profile_id"
+    t.integer "skill_id"
+  end
+
+# Could not dump table "sqlite_stat1" because of following NoMethodError
+#   undefined method `[]' for nil:NilClass
 
   create_table "user_profiles", force: :cascade do |t|
     t.string   "name"
-    t.boolean  "bas_location"
     t.boolean  "is_fte"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.string   "base_location"
   end
 
   create_table "users", force: :cascade do |t|

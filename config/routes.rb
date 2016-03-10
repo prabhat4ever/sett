@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :skill_user_profiles, except: [:new, :edit]
+  namespace :admin do resources :skills, except: [:new, :edit] end
   resources :user_profiles, except: [:new, :edit]
   devise_for :users , defaults: { format: :json },controllers: { sessions: "users/sessions" }
   # The priority is based upon order of creation: first created -> highest priority.

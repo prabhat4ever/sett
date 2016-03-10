@@ -7,6 +7,7 @@ respond_to :json
 
 def after_sign_in_path_for(user)
 
+byebug
     return user_profiles_url
    
    

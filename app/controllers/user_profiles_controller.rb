@@ -5,6 +5,7 @@ class UserProfilesController < ApplicationController
   # GET /user_profiles.json
   def index
     @user_profiles = UserProfile.all
+    byebug
 
     render json: @user_profiles
   end
@@ -12,6 +13,7 @@ class UserProfilesController < ApplicationController
   # GET /user_profiles/1
   # GET /user_profiles/1.json
   def show
+    @user_profile = UserProfile.find(params[:id])
     render json: @user_profile
   end
 

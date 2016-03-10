@@ -1,0 +1,83 @@
+
+1....Post request for sign in
+
+	{
+		"user":
+			{
+				"email":"hussain@gmail.com",
+				"password":"athar123",
+				"remember_me":"0"
+			}
+	}
+
+
+1.1...... response of sign in
+		
+		{
+		  "id": 1,
+		  "email": "hussain@gmail.com",
+		  "created_at": "2016-03-08T06:50:04.723Z",
+		  "updated_at": "2016-03-08T08:42:37.068Z",
+		  "authentication_token": "-xduuhsxZDWbK6F9Pq57"
+		}
+
+
+
+
+
+2.....get request in Params provide
+			
+			user_email  "hussain@gmail.com"
+			user_token  "-xduuhsxZDWbK6F9Pq57"
+
+2.1.... response of get request for user_profiles 
+
+
+		[
+		  {
+		    "id": 1,
+		    "name": "Athar",
+		    "bas_location": true,
+		    "is_fte": false,
+		    "created_at": "2016-03-08T09:40:11.053Z",
+		    "updated_at": "2016-03-08T09:40:11.053Z"
+		  }
+		]
+3..... get request to view specific user_profile
+		provide in params
+
+				id      1
+				user_email  "hussain@gmail.com"
+				user_token  "-xduuhsxZDWbK6F9Pq57"
+
+
+3.1.... response of get request for user_profiles with parms[:id]=1
+
+
+		[
+		  {
+		    "id": 1,
+		    "name": "Athar",
+		    "bas_location": true,
+		    "is_fte": false,
+		    "created_at": "2016-03-08T09:40:11.053Z",
+		    "updated_at": "2016-03-08T09:40:11.053Z"
+		  }
+		]
+4.......Creating Skills
+		http://localhost:3000/admin/skills?user_email=hussain@gmail.com&user_token=-xduuhsxZDWbK6F9Pq57
+
+		Params: 
+				user_email  "hussain@gmail.com"
+				user_token  "-xduuhsxZDWbK6F9Pq57"
+
+		Body Row Json data:
+				{
+				 	"admin_skill":
+				 		{
+				    		"name": "JAVA EE",
+				    		"desc": "Java Enterprise Edition"
+				    	}
+				}
+
+5..............
